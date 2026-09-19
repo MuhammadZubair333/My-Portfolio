@@ -35,13 +35,13 @@ export const metadata: Metadata = {
     title,
     description,
     locale: "en_US",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Muhammad Zubair, AI Engineer" }],
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Muhammad Zubair, AI Engineer" }],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: ["/og.jpg"],
+    images: ["/og-image.jpg"],
   },
 };
 

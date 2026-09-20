@@ -1,6 +1,11 @@
 /**
  * Project data: add a new object to `projects` to publish a new project.
  * The Projects section, filters and layout all derive from this file.
+ *
+ * Card sizes come from position, not from the data: the first project is the
+ * spotlight, and the rest alternate big/small down the grid. Keep the featured
+ * projects at the top of the array, since the section sorts them first and the
+ * resulting order is what decides which project lands in which slot.
  */
 
 export const projectCategories = [
@@ -28,6 +33,7 @@ export type Project = {
   tags: string[];
   /** Fill in when you want to list the stack used for a project. */
   technologies?: string[];
+  /** Sorted to the front of the grid. Keep these first in the array too. */
   featured?: boolean;
   /** Brand accent used for small details on the card. */
   accent: string;
@@ -74,6 +80,19 @@ export const projects: Project[] = [
     accent: "#e11d2a",
   },
   {
+    slug: "doctor-ai",
+    title: "Doctor AI",
+    url: "https://doctor-ai-gold.vercel.app/",
+    label: "AI Chatbot",
+    categories: ["AI", "Chatbots"],
+    description:
+      "An AI-powered conversational experience for general health-related information, set inside a clean healthcare-style interface with quick links to emergency ambulance services. For information only, not a substitute for professional medical advice.",
+    image: "/projects/doctor-ai.webp",
+    tags: ["AI chatbot", "Conversational UI", "Health information"],
+    featured: true,
+    accent: "#3b82f6",
+  },
+  {
     slug: "amp-mobile-parts",
     title: "AMP Mobile Parts",
     url: "https://mobile-parts-store.vercel.app/",
@@ -87,30 +106,6 @@ export const projects: Project[] = [
     accent: "#ff7a1a",
   },
   {
-    slug: "ai-proposal-writer",
-    title: "AI Proposal Writer",
-    url: "https://upwork-proposal-ai.vercel.app/",
-    label: "AI Application",
-    categories: ["AI"],
-    description:
-      "An AI tool that turns a pasted Upwork job description into a tailored proposal draft. A focused, single-purpose interface built around one job.",
-    image: "/projects/ai-proposal-writer.webp",
-    tags: ["Generative AI", "Proposal generation", "Single-purpose tool"],
-    accent: "#10b981",
-  },
-  {
-    slug: "doctor-ai",
-    title: "Doctor AI",
-    url: "https://doctor-ai-gold.vercel.app/",
-    label: "AI Chatbot",
-    categories: ["AI", "Chatbots"],
-    description:
-      "An AI-powered conversational experience for general health-related information, set inside a clean healthcare-style interface with quick links to emergency ambulance services. For information only, not a substitute for professional medical advice.",
-    image: "/projects/doctor-ai.webp",
-    tags: ["AI chatbot", "Conversational UI", "Health information"],
-    accent: "#3b82f6",
-  },
-  {
     slug: "vip-setup-showcase",
     title: "VIP Setup",
     url: "https://vip-setup-showcase.vercel.app/",
@@ -121,5 +116,17 @@ export const projects: Project[] = [
     image: "/projects/vip-setup-showcase.webp",
     tags: ["Restaurant", "Online menu", "Cart", "Location & directions"],
     accent: "#f59e0b",
+  },
+  {
+    slug: "ai-proposal-writer",
+    title: "AI Proposal Writer",
+    url: "https://upwork-proposal-ai.vercel.app/",
+    label: "AI Application",
+    categories: ["AI"],
+    description:
+      "An AI tool that turns a pasted Upwork job description into a tailored proposal draft. A focused, single-purpose interface built around one job.",
+    image: "/projects/ai-proposal-writer.webp",
+    tags: ["Generative AI", "Proposal generation", "Single-purpose tool"],
+    accent: "#10b981",
   },
 ];

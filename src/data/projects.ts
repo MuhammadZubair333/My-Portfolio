@@ -74,6 +74,19 @@ export const projects: Project[] = [
     accent: "#e11d2a",
   },
   {
+    slug: "amp-mobile-parts",
+    title: "AMP Mobile Parts",
+    url: "https://mobile-parts-store.vercel.app/",
+    label: "E-commerce Storefront",
+    categories: ["Web Development"],
+    description:
+      "Online store for a Karachi supplier of iPhone spare parts, with a searchable catalogue of displays, batteries, charging flex, cameras and NFC modules, filters by model, a cart, and a checkout that hands the order over to WhatsApp.",
+    image: "/projects/amp-mobile-parts.webp",
+    tags: ["Mobile parts store", "Catalogue search & filters", "Cart & checkout", "WhatsApp enquiries"],
+    featured: true,
+    accent: "#ff7a1a",
+  },
+  {
     slug: "ai-proposal-writer",
     title: "AI Proposal Writer",
     url: "https://upwork-proposal-ai.vercel.app/",
